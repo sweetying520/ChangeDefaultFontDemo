@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity"
+    tools:ignore="Autofill,LabelFor,no,TextFields,HardcodedText">
+
+
+     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:textSize="30sp"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/black"
+         android:fontFamily="sans-serif-light"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello Sweetying!"
+        android:textSize="30sp"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:fontFamily="casual"
+        android:layout_gravity="center_horizontal" />
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello My Friends!"
+        android:textSize="30sp"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/black"
+        android:fontFamily="cursive"
+        android:layout_gravity="center_horizontal" />
+
+
+
+    <!--如果没设置字体，则会使用系统默认字体-->
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="toXmlFontActivity!"
+        android:textSize="30sp"
+        android:layout_marginTop="100dp"
+        android:textAllCaps="false"
+        android:onClick="toXmlFontActivity"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center_horizontal"
+        tools:ignore="UsingOnClickInXml" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我是默认字体!"
+        android:textSize="30sp"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>
+
+
+
+
+
+
