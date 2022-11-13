@@ -57,6 +57,18 @@
         android:layout_gravity="center_horizontal"
         tools:ignore="UsingOnClickInXml" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="toFontScaleActivity!"
+        android:textSize="30sp"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:onClick="toFontScaleActivity"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center_horizontal"
+        tools:ignore="UsingOnClickInXml" />
+
 
     <Button
         android:layout_width="wrap_content"

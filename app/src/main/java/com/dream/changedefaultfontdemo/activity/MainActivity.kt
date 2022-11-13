@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.TextView
 import com.dream.changedefaultfontdemo.R
 import com.dream.changedefaultfontdemo.base.BaseActivity
+import com.dream.changedefaultfontdemo.fontscale.FontScaleActivity
 
 class MainActivity : BaseActivity() {
 
@@ -19,5 +20,9 @@ class MainActivity : BaseActivity() {
 
     fun toXmlFontActivity(view: View) {
         startActivity(Intent(this,XmlFontActivity::class.java))
+    }
+
+    fun toFontScaleActivity(view: View) {
+        startActivity(Intent(this,FontScaleActivity::class.java))
     }
 }

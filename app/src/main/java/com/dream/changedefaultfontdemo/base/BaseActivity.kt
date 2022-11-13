@@ -1,6 +1,7 @@
 package com.dream.changedefaultfontdemo.base
 
 import android.content.Context
+import android.content.res.Resources
 import android.os.Bundle
 import android.util.AttributeSet
 import android.util.Log
@@ -10,6 +11,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.LayoutInflaterCompat
 import com.dream.changedefaultfontdemo.utils.ChangeDefaultFontUtils
+import com.dream.changedefaultfontdemo.utils.FontUtil
 
 
 /**
@@ -79,4 +81,21 @@ abstract class BaseActivity: AppCompatActivity(){
 
     /**初始化*/
     abstract fun initView()
+
+    companion object{
+        var fontScale = 1.0f
+    }
+
+    override fun getResources(): Resources {
+        return FontUtil.getResource(this,super.getResources(), fontScale)
+    }
+
+    override fun attachBaseContext(newBase: Context?) {
+        super.attachBaseContext(FontUtil.attachBaseContext(newBase!!, fontScale))
+    }
+
+    fun setFontScale(fs: Float){
+        fontScale = fs
+        recreate()
+    }
 }

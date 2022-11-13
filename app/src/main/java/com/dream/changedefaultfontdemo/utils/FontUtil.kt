@@ -1,5 +1,7 @@
 package com.dream.changedefaultfontdemo.utils
 
+import android.content.Context
+import android.content.res.Resources
 import android.graphics.Typeface
 import android.widget.TextView
 import androidx.core.content.res.ResourcesCompat
@@ -58,5 +60,28 @@ object FontUtil {
             e.printStackTrace()
             Typeface.DEFAULT
         }
+    }
+
+    /**
+     * 设置字体大小不随系统设置变化
+     * 重写 Activity 的 getResource
+     */
+    fun getResource(context: Context,resources: Resources,fontScale: Float): Resources{
+        val configuration = resources.configuration
+        if(configuration.fontScale != fontScale){
+            configuration.fontScale = fontScale
+            return context.createConfigurationContext(configuration).resources
+        }
+        return resources
+    }
+
+    /**
+     * 设置字体大小不随系统设置变化
+     * 重写 Activity 的 attachBaseContext
+     */
+    fun attachBaseContext(context: Context,fontScale: Float): Context{
+        val configuration = context.resources.configuration
+        configuration.fontScale = fontScale
+        return context.createConfigurationContext(configuration)
     }
 }
